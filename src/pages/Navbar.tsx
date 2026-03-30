@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
         </nav>
 
         {/* Right Actions (Desktop) */}
-        <div className="flex-shrink-0 flex items-center gap-3">
+        <div className="hidden lg:flex flex-shrink-0 flex items-center gap-3">
           <a className="bg-[#005596] hover:bg-[#00427a] text-white text-[14px] font-bold uppercase py-2.5 px-4 rounded-[4px] text-center shadow-sm">
             Bookstore
           </a>

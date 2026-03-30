@@ -11,7 +11,7 @@ const resources = [
 const branch = [
   { title: "About Us", url: "/about-us" },
   { title: "Our Team", url: "/our-team" },
-  { title: "Contact Us", url: "/contact-us" },
+  { title: "Contact Us", url: "sustbranchashrae@gmail.com" },
   { title: "Facebook", url: "https://www.facebook.com/p/Ashrae-Sust-Branch-61569962309429/" },
   { title: "YouTube", url: "https://www.youtube.com/@ASHRAESUSTBRANCH" }
 ]
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
               <div key={index}>
                 <ul className="space-y-4">
                   <li>
-                    <a href={branch.url} target="_blank" rel="noopener noreferrer" className="text-[#8492a6] hover:underline text-[12px] font-semibold uppercase tracking-wider hover:text-[#153465] transition-colors">
+                    <a href={branch.url}  target="_blank" rel="noopener noreferrer" className="text-[#8492a6] hover:underline text-[12px] font-semibold uppercase tracking-wider hover:text-[#153465] transition-colors">
                       {branch.title}
                     </a>
                   </li>
