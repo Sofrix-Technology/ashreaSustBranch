@@ -1,11 +1,10 @@
 import React from 'react';
 
 const resources = [
-  { title: "ASHRAE Global", url: "https://www.ashrae.org/" , target: "_blank", rel: "noopener noreferrer" },
+  { title: "ASHRAE Global", url: "https://www.ashrae.org/", target: "_blank", rel: "noopener noreferrer" },
   { title: "Technical Standards", url: "/technical-standards" },
   { title: "Job Board", url: "/job-board" },
-  { title: "Branch", url: "/branch" },
-
+  { title: "Branch", url: "/branch" }
 ];
 
 const branch = [
@@ -20,13 +19,14 @@ const branch = [
 const Footer: React.FC = () => {
   return (
     <footer className="flex flex-col items-center justify-center  bg-[#f6f6f6] py-16 px-6 md:px-12 lg:px-24 w-full font-sans">
-      <div className="max-w-7xl w-full mx-auto flex flex-col md:flex-row justify-between gap-12 md:gap-8">
+      <div className="max-w-360 w-full mx-auto flex flex-col md:flex-row justify-between gap-12 md:gap-8">
         {/* Brand Section */}
         <div className="flex flex-col md:max-w-xs lg:max-w-sm space-y-4">
           <img src="/Ashrae-Logo-H.png" alt="Ashrae SUST Branch Logo" />
           <p className="text-[#8492a6] text-[14px] leading-relaxed pr-4">
-            Developing sustainable building technology and promoting healthy
-            indoor environments for all
+            Leading the way in sustainable built
+            environments at Sudan University of
+            Science and Technology.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
               <div key={index}>
                 <ul className="space-y-4">
                   <li>
-                    <a href={branch.url}  target="_blank" rel="noopener noreferrer" className="text-[#8492a6] hover:underline text-[12px] font-semibold uppercase tracking-wider hover:text-[#153465] transition-colors">
+                    <a href={branch.url} target="_blank" rel="noopener noreferrer" className="text-[#8492a6] hover:underline text-[12px] font-semibold uppercase tracking-wider hover:text-[#153465] transition-colors">
                       {branch.title}
                     </a>
                   </li>

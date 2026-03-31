@@ -3,6 +3,7 @@ import CallToAction from './pages/CallToAction'
 import Navbar from './pages/Navbar'
 import Partners from './pages/Partners'
 import HeroSection from './pages/HeroSection'
+import StudentResearch from './components/StudentResearch'
 
 function App() {
 
@@ -11,8 +12,10 @@ function App() {
       <Navbar />
       <main className="flex-grow">
         <HeroSection/>
-        <Partners />
+        
         {/* Main content will go here */}
+        <StudentResearch/>
+        <Partners />
       </main>
       <CallToAction />
       <Footer />
