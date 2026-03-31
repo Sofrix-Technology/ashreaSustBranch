@@ -2,8 +2,6 @@ import Footer from './pages/Footer'
 import CallToAction from './pages/CallToAction'
 import Navbar from './pages/Navbar'
 import Partners from './pages/Partners'
-import TooltipCursor from './components/TooltipCursor'
-import AshraeLogo from './components/AshraeLogo'
 import HeroSection from './pages/HeroSection'
 
 function App() {

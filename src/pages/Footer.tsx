@@ -1,7 +1,7 @@
 import React from 'react';
 
 const resources = [
-  { title: "ASHRAE Global", url: "/ashrae-global" },
+  { title: "ASHRAE Global", url: "https://www.ashrae.org/" , target: "_blank", rel: "noopener noreferrer" },
   { title: "Technical Standards", url: "/technical-standards" },
   { title: "Job Board", url: "/job-board" },
   { title: "Branch", url: "/branch" },
@@ -13,8 +13,9 @@ const branch = [
   { title: "Our Team", url: "/our-team" },
   { title: "Contact Us", url: "sustbranchashrae@gmail.com" },
   { title: "Facebook", url: "https://www.facebook.com/p/Ashrae-Sust-Branch-61569962309429/" },
-  { title: "YouTube", url: "https://www.youtube.com/@ASHRAESUSTBRANCH" }
-]
+  { title: "YouTube", url: "https://www.youtube.com/@ASHRAESUSTBRANCH" },
+  { title: "LinkedIn", url: "https://www.linkedin.com/company/ashrae-sust-branch/" }
+];
 
 const Footer: React.FC = () => {
   return (
@@ -36,7 +37,7 @@ const Footer: React.FC = () => {
               <div key={index}>
                 <ul className="space-y-4">
                   <li>
-                    <a href={resource.url} className="text-[#8492a6] hover:underline text-[12px] font-semibold uppercase tracking-wider hover:text-[#153465] transition-colors">
+                    <a href={resource.url} target={resource.target} rel={resource.rel} className="text-[#8492a6] hover:underline text-[12px] font-semibold uppercase tracking-wider hover:text-[#153465] transition-colors">
                       {resource.title}
                     </a>
                   </li>
