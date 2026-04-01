@@ -1,5 +1,3 @@
-import React from 'react';
-
 const PremiumResourceCard = () => {
   return (
     <div className="bg-[#051320] rounded-[2rem] p-8 md:p-10 flex flex-col h-full relative overflow-hidden group">

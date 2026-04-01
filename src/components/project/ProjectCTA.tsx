@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ProjectCTA = () => {
   return (
     <section className="bg-[#EAEAEA] rounded-[3rem] p-12 md:p-20 flex flex-col md:flex-row items-center justify-between gap-12">

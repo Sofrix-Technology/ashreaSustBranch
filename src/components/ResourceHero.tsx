@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ResourceHero = () => {
   return (
     <section className="px-4 sm:px-6 md:px-8 pt-6 w-full max-w-[1500px] mx-auto">

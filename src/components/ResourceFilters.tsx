@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ResourceFilters = () => {
   const categories = [
     { name: 'All Resources', active: true },

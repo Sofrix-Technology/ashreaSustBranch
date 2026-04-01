@@ -1,5 +1,3 @@
-import React from 'react';
-
 const FeaturedProject = () => {
   const tags = ["Revit MEP", "Carrier HAP", "ASHRAE 90.1"];
 
