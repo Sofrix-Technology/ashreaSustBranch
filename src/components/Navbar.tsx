@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const navLinks = [
-  { name: 'Home', href: '#', isActive: false },
-  { name: 'Activities', href: '#', isActive: true },
-  { name: 'Projects', href: '#', isActive: false },
-  { name: 'Resources', href: '#', isActive: false },
-  { name: 'Team', href: '#', isActive: false },
+  { name: 'Home', path : '/', isActive: false },
+  { name: 'Activities', path: '/activities', isActive: true },
+  { name: 'Projects', path: '/projects', isActive: false },
+  { name: 'Resources', path: '/resources', isActive: false },
+  { name: 'Team', path: '/team', isActive: false },
 ];
 
 const Navbar: React.FC = () => {
@@ -13,7 +14,7 @@ const Navbar: React.FC = () => {
 
   return (
     <header className="w-full font-sans bg-white flex items-center justify-center border-b border-gray-100 relative z-50">
-      <div className="max-w-7xl mx-auto w-full flex items-center justify-between px-6 lg:px-12 h-20 gap-4 md:gap-0">
+      <div className="max-w-360 mx-auto w-full flex items-center justify-between px-6 lg:px-12 h-20 gap-4 md:gap-0">
 
         {/* Logo Section */}
         <div className="flex-shrink-0 flex items-center justify-between w-full lg:w-auto">
@@ -41,17 +42,18 @@ const Navbar: React.FC = () => {
         {/* Center Navigation Links (Desktop) */}
         <nav className="hidden lg:flex flex-1 items-center justify-center space-x-9">
           {navLinks.map((link, idx) => (
-            <a 
+            <NavLink
               key={idx} 
-              href={link.href} 
-              className={`text-[15px] font-[500] transition-colors py-1.5 border-b-2
-                ${link.isActive 
+              
+              to={link.path}
+              className={({ isActive }) => `text-[15px] font-[500] transition-colors py-1.5 border-b-2
+                ${isActive 
                   ? 'text-[#2563eb] border-[#2563eb]' 
                   : 'text-[#6b7280] border-transparent hover:text-gray-900 hover:border-gray-200'
                 }`}
             >
               {link.name}
-            </a>
+            </NavLink>
           ))}
         </nav>
 
@@ -73,15 +75,15 @@ const Navbar: React.FC = () => {
       >
         <div className="px-6 py-4 flex flex-col space-y-1">
           {navLinks.map((link, idx) => (
-            <a 
+            <NavLink
               key={idx} 
-              href={link.href} 
-              className={`block text-[16px] font-[500] py-3 border-b border-gray-50 transition-colors
-                ${link.isActive ? 'text-[#2563eb]' : 'text-gray-600 hover:text-gray-900'}
+              to={link.path}
+              className={({ isActive }) => `block text-[16px] font-[500] py-3 border-b border-gray-50 transition-colors
+                ${isActive ? 'text-[#2563eb]' : 'text-gray-600 hover:text-gray-900'}
               `}
             >
               {link.name}
-            </a>
+            </NavLink>
           ))}
 
           <div className="pt-5 pb-2 flex flex-col gap-3">

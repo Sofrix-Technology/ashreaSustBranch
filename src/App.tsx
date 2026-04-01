@@ -1,9 +1,10 @@
-import Footer from './pages/Footer'
-import CallToAction from './pages/CallToAction'
-import Navbar from './pages/Navbar'
-import Partners from './pages/Partners'
-import HeroSection from './pages/HeroSection'
-import StudentResearch from './components/StudentResearch'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import Resources from './pages/Resources'
+import Navbar from './components/Navbar'
+import { Route, Routes } from 'react-router-dom'
+import Projects from './pages/Projects'
+import ComingSoon from './components/ComingSoon'
 
 function App() {
 
@@ -11,13 +12,15 @@ function App() {
     <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       <main className="flex-grow">
-        <HeroSection/>
-        
-        {/* Main content will go here */}
-        <StudentResearch/>
-        <Partners />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/projects" element={<Projects />} /> 
+          <Route path="/activities" element={<ComingSoon />} />
+          <Route path="/team" element={<ComingSoon />} />
+        </Routes>
       </main>
-      <CallToAction />
+    
       <Footer />
     </div>
   )

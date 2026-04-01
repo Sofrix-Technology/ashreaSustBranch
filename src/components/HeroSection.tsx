@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import CorePillars from "../components/CorePillars";
-import TooltipCursor from "../components/TooltipCursor";
-import AshraeLogo from "../components/AshraeLogo";
+
+import TooltipCursor from "./TooltipCursor";
+import AshraeLogo from "./AshraeLogo";
 
 interface AnimatedCounterProps {
   end: number;
@@ -102,7 +102,7 @@ export default function HeroSection() {
       <section className="w-full bg-[#f8f9fa] py-14 border-b border-gray-200 font-sans">
         <div className="w-full max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-2 lg:flex lg:flex-row justify-between items-stretch gap-y-12 lg:gap-y-0">
-            
+
             {/* Stat 1 */}
             <div className="flex flex-col items-start text-left w-full lg:w-1/4 lg:border-r border-gray-200 lg:pr-8">
               <span className="text-[2.2rem] lg:text-[2.6rem] leading-none mb-1 font-medium text-[#0f1b29]">
@@ -146,7 +146,7 @@ export default function HeroSection() {
           </div>
         </div>
       </section>
-      <CorePillars />
+    
     </>
   );
-}
+}

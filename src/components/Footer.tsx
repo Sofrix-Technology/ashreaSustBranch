@@ -18,7 +18,7 @@ const branch = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex flex-col items-center justify-center  bg-[#f6f6f6] py-16 px-6 md:px-12 lg:px-24 w-full font-sans">
+    <footer className="flex flex-col items-center justify-center bg-[#f6f6f6] pt-10 pb-4 px-6 md:px-12 lg:px-24 w-full font-sans">
       <div className="max-w-360 w-full mx-auto flex flex-col md:flex-row justify-between gap-12 md:gap-8">
         {/* Brand Section */}
         <div className="flex flex-col md:max-w-xs lg:max-w-sm space-y-4">
@@ -61,10 +61,20 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-[#ebecf0] text-center">
-        <p className="text-[#8492a6] text-[12px] font-semibold uppercase tracking-wider">
-          &copy; {new Date().getFullYear()} ASHRAE SUST Student Branch. Engineering Sustainable Futures
-        </p>
+      <div className="w-full max-w-360  mt-4 pt-4 border-t border-[#ebecf0] text-center flex md:flex-row flex-col items-center justify-between">
+        <div>
+          <p className="text-[#8492a6] text-[12px] font-semibold uppercase tracking-wider">
+            &copy; {new Date().getFullYear()} ASHRAE SUST Student Branch. Khartoum, Sudan
+          </p>
+        </div>
+        <div className='flex flex-col md:flex-row items-center space-x-4'>
+          <a href="" className='text-[#8492a6] text-[12px] font-semibold uppercase tracking-wider'>
+            Privacy
+          </a>
+          <a href="" className='text-[#8492a6] text-[12px] font-semibold uppercase tracking-wider'>
+            Terms of Use
+          </a>
+        </div>
       </div>
     </footer>
   );
