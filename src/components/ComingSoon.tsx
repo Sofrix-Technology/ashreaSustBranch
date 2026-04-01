@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const ComingSoonCard = () => {
   return (
-    <div className="w-full max-w-2xl mx-auto max-h-screen relative mt-10 bg-slate-50 border-2 border-dashed border-slate-200 rounded-[2rem] p-8 min-h-[400px] overflow-hidden group">
+    <div className="w-full max-w-2xl mx-auto max-h-screen relative mt-10 mb-10 bg-slate-50 border-2 border-dashed border-slate-200 rounded-[2rem] p-8 min-h-[400px] overflow-hidden group">
       
       <div 
         className=" flex flex-col items-center justify-center text-center"
