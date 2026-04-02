@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
               <div key={index}>
                 <ul className="space-y-4">
                   <li>
-                    <a href={resource.url} target={resource.target} rel={resource.rel} className="text-[#8492a6] hover:underline text-[12px] font-semibold uppercase tracking-wider hover:text-[#153465] transition-colors">
+                    <a href={resource.url} target={resource.target} rel={resource.rel} className="text-[#8492a6] hover:underline text-[12px] uppercase tracking-wider hover:text-[#153465] transition-colors">
                       {resource.title}
                     </a>
                   </li>
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
               <div key={index}>
                 <ul className="space-y-4">
                   <li>
-                    <a href={branch.url} target="_blank" rel="noopener noreferrer" className="text-[#8492a6] hover:underline text-[12px] font-semibold uppercase tracking-wider hover:text-[#153465] transition-colors">
+                    <a href={branch.url} target="_blank" rel="noopener noreferrer" className="text-[#8492a6] hover:underline text-[12px] uppercase tracking-wider hover:text-[#153465] transition-colors">
                       {branch.title}
                     </a>
                   </li>
@@ -63,15 +63,15 @@ const Footer: React.FC = () => {
 
       <div className="w-full max-w-360  mt-4 pt-4 border-t border-[#ebecf0] text-center flex md:flex-row flex-col items-center justify-between">
         <div>
-          <p className="text-[#8492a6] text-[12px] uppercase tracking-wider font-light">
+          <p className="text-[#8492a6] text-[12px] uppercase tracking-wider">
             &copy; {new Date().getFullYear()} ASHRAE SUST Student Branch. Khartoum, Sudan
           </p>
         </div>
         <div className='flex flex-col md:flex-row items-center space-x-4'>
-          <a href="" className='text-[#8492a6] text-[12px] font-light hover:underline uppercase tracking-wider'>
+          <a href="" className='text-[#8492a6] text-[12px] hover:underline uppercase tracking-wider'>
             Privacy
           </a>
-          <a href="" className='text-[#8492a6] text-[12px] font-light hover:underline uppercase tracking-wider'>
+          <a href="" className='text-[#8492a6] text-[12px] hover:underline uppercase tracking-wider'>
             Terms of Use
           </a>
         </div>
