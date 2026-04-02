@@ -63,15 +63,15 @@ const Footer: React.FC = () => {
 
       <div className="w-full max-w-360  mt-4 pt-4 border-t border-[#ebecf0] text-center flex md:flex-row flex-col items-center justify-between">
         <div>
-          <p className="text-[#8492a6] text-[12px] font-semibold uppercase tracking-wider">
+          <p className="text-[#8492a6] text-[12px] uppercase tracking-wider font-light">
             &copy; {new Date().getFullYear()} ASHRAE SUST Student Branch. Khartoum, Sudan
           </p>
         </div>
         <div className='flex flex-col md:flex-row items-center space-x-4'>
-          <a href="" className='text-[#8492a6] text-[12px] font-semibold uppercase tracking-wider'>
+          <a href="" className='text-[#8492a6] text-[12px] font-light hover:underline uppercase tracking-wider'>
             Privacy
           </a>
-          <a href="" className='text-[#8492a6] text-[12px] font-semibold uppercase tracking-wider'>
+          <a href="" className='text-[#8492a6] text-[12px] font-light hover:underline uppercase tracking-wider'>
             Terms of Use
           </a>
         </div>
