@@ -15,7 +15,6 @@ const JoinSection: React.FC = () => {
       body: new URLSearchParams(formData as any).toString(),
     })
       .then(() => {
-        // في حالة النجاح:
         toast.success("Form successfully submitted!", {
           id: loadingToast,
         });
@@ -89,7 +88,7 @@ const JoinSection: React.FC = () => {
               <div className="md:col-span-2 mt-4">
                 <button
                   type="submit"
-                  className="w-full bg-[#2563eb] hover:bg-[#1d4ed8] text-white py-4 rounded-full font-bold text-lg transition-all"
+                  className="w-full bg-[#009245] hover:bg-[#007a38] text-white py-4 rounded-full font-bold text-lg transition-all"
                 >
                   Send Application
                 </button>
