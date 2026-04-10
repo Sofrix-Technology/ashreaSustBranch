@@ -1,21 +1,39 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 const JoinSection: React.FC = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
+    const loadingToast = toast.loading('Sending your application...');
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData as any).toString(),
     })
-      .then(() => alert("Form successfully submitted!"))
-      .catch((error) => alert(error));
+      .then(() => {
+        // في حالة النجاح:
+        toast.success("Form successfully submitted!", {
+          id: loadingToast,
+        });
+        
+        formRef.current?.reset();
+      })
+      .catch((error) => {
+        toast.error("Something went wrong. Please try again.", {
+          id: loadingToast,
+        });
+        console.error(error);
+      });
   };
 
   return (
     <section id="join-section" className="py-16 px-6 lg:px-12">
+      <Toaster position="top-center" reverseOrder={false} />
+
       <div className="max-w-7xl mx-auto">
         <div className="bg-[#122338] rounded-[2rem] p-8 md:p-16 text-center relative overflow-hidden">
           
@@ -27,13 +45,13 @@ const JoinSection: React.FC = () => {
             <h2 className="text-white text-3xl md:text-5xl font-bold mt-4 mb-6 leading-tight">Ready to Shape the Future?</h2>
             
             <form
+              ref={formRef}
               name="contact"
               method="POST"
               onSubmit={handleSubmit}
               data-netlify="true"
               className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left"
             >
-              {/* السطر الأهم لـ Netlify في React */}
               <input type="hidden" name="form-name" value="contact" />
 
               <div className="flex flex-col gap-2">
