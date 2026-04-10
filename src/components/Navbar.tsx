@@ -80,6 +80,7 @@ const Navbar: React.FC = () => {
             <NavLink
               key={idx}
               to={link.path}
+              onClick={() => setMobileMenuOpen(false)}
               className={({ isActive }) => `block text-[16px] font-[500] py-3 border-b border-gray-50 transition-colors
               ${isActive ? 'text-[#2563eb]' : 'text-gray-600 hover:text-gray-900'}`}
             >
@@ -88,12 +89,16 @@ const Navbar: React.FC = () => {
           ))}
 
           <div className="pt-5 pb-2 flex flex-col gap-3">
-            <a href="#" className="w-full text-center text-[#3b5b9c] font-[600] py-2">
+            <a 
+              onClick={() => setMobileMenuOpen(false)}
+              href="#" 
+              className="w-full text-center text-[#3b5b9c] font-[600] py-2">
               Contact
             </a>
 
             <a
               href="#"
+              onClick={() => setMobileMenuOpen(false)}
               className="w-full bg-[#122338] hover:bg-[#1a3350] text-white text-[15px] font-[600] py-3 rounded-full text-center transition-colors"
             >
               Join Now
