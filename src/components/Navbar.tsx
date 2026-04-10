@@ -59,12 +59,12 @@ const Navbar: React.FC = () => {
 
         {/* Right Actions (Desktop) */}
         <div className="hidden lg:flex flex-shrink-0 items-center gap-7">
-          <a href="#" className="text-[#3b5b9c] hover:text-[#2a457d] text-[15px] font-[600] transition-colors">
+          <NavLink to="/contact" className="text-[#3b5b9c] hover:text-[#2a457d] text-[15px] font-[600] transition-colors">
             Contact
-          </a>
-          <a href="#" className="bg-[#122338] hover:bg-[#1a3350] text-white text-[14px] font-[600] py-2.5 px-7 rounded-full transition-colors tracking-wide shadow-xs">
+          </NavLink>
+          <NavLink to="/join" className="bg-[#122338] hover:bg-[#1a3350] text-white text-[14px] font-[600] py-2.5 px-7 rounded-full transition-colors tracking-wide shadow-xs">
             Join Now
-          </a>
+          </NavLink>
         </div>
 
       </div>
@@ -89,20 +89,20 @@ const Navbar: React.FC = () => {
           ))}
 
           <div className="pt-5 pb-2 flex flex-col gap-3">
-            <a 
+            <NavLink
               onClick={() => setMobileMenuOpen(false)}
-              href="#" 
+              to="/contact"
               className="w-full text-center text-[#3b5b9c] font-[600] py-2">
               Contact
-            </a>
+            </NavLink>
 
-            <a
-              href="#"
+            <NavLink
+              to="/join"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full bg-[#122338] hover:bg-[#1a3350] text-white text-[15px] font-[600] py-3 rounded-full text-center transition-colors"
             >
               Join Now
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

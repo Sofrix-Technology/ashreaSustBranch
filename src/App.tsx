@@ -5,6 +5,8 @@ import Navbar from './components/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import Projects from './pages/Projects'
 import ComingSoon from './components/ComingSoon'
+import JoinSection from './components/JoinSection'
+import ContactSection from './components/ContactSection'
 
 function App() {
 
@@ -15,12 +17,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/resources" element={<Resources />} />
-          <Route path="/projects" element={<Projects />} /> 
+          <Route path="/projects" element={<Projects />} />
           <Route path="/activities" element={<ComingSoon />} />
           <Route path="/team" element={<ComingSoon />} />
+          <Route path="/contact" element={<ContactSection />} />
+          <Route path="/join" element={<JoinSection />} />
         </Routes>
       </main>
-    
+
       <Footer />
     </div>
   )
