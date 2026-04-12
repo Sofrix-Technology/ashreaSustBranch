@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Partners: React.FC = () => {
-  // التعديل الأساسي هنا: زيادة العرض بشكل كبير واستخدام min-w لضمان عدم الانكماش
   const logoContainerClasses = `
     flex items-center justify-center 
     min-w-[180px] h-[50px] 
@@ -29,22 +28,22 @@ const Partners: React.FC = () => {
             >
 
               <div className={logoContainerClasses}>
-                <img src="/engx.png" alt="Engex Logo" className="max-w-full max-h-full object-contain block" />
+                <img loading="lazy" src="/engx.webp" alt="Engex Logo" className="max-w-full max-h-full object-contain block" />
               </div>
 
               {/* --- Logo 3 (Sudan Chapter) --- */}
               <div className={logoContainerClasses}>
-                <img src="/sudanchapter.jpg" alt="Sudan Chapter" className="max-w-full max-h-full object-contain block" />
+                <img loading="lazy" src="/sudanchapter.webp" alt="Sudan Chapter" className="max-w-full max-h-full object-contain block" />
               </div>
 
               {/* --- Logo 5 (Ain Shams) --- */}
               <div className={logoContainerClasses}>
-                <img src="/ainshams.png" alt="Ain Shams" className="max-w-full max-h-full object-contain block" />
+                <img loading="lazy" src="/ainshams.webp" alt="Ain Shams" className="max-w-full max-h-full object-contain block" />
               </div>
 
               {/* --- Logo 6 (UOK) --- */}
               <div className={logoContainerClasses}>
-                <img src="/uok.jpg" alt="UOK" className="max-w-full max-h-full object-contain block" />
+                <img loading="lazy" src="/uok.webp" alt="UOK" className="max-w-full max-h-full object-contain block" />
               </div>
 
             </div>

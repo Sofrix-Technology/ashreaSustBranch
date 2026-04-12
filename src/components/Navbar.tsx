@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
         {/* Logo Section */}
         <div className="flex-shrink-0 flex items-center justify-between w-full lg:w-auto">
           <a href="/" className="flex items-center gap-3">
-            <img src="/Ashrae-Logo-H.png" alt="Logo" className="h-9 md:h-11 object-contain" />
+            <img src="/Ashrae-Logo-H.webp" alt="Logo" className="h-9 md:h-11 object-contain" />
           </a>
 
           {/* Mobile menu button */}

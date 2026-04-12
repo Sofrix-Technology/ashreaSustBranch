@@ -7,7 +7,7 @@ const ResourceHero = () => {
         <div className="absolute inset-y-0 right-0 w-[150%] md:w-[65%] lg:w-[55%]">
            <div 
              className="absolute inset-0 bg-cover bg-right bg-no-repeat opacity-[0.35]"
-             style={{ backgroundImage: `url('/hvac-resources.jpg')` }}
+             style={{ backgroundImage: `url('/hvac-resources.webp')` }}
            />
            {/* Gradient mask to blend the image perfectly into the dark blue on the left */}
            <div className="absolute inset-0 bg-gradient-to-r from-[#0c1928] via-[#0c1928]/50 to-transparent" />

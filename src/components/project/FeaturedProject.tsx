@@ -6,7 +6,7 @@ const FeaturedProject = () => {
       {/* Background Image Placeholder */}
       <div className="absolute inset-0 z-0 opacity-20">
         <img 
-          src="/hvac-projects.jpg" 
+          src="/hvac-projects.webp" 
           alt="HVAC Background" 
           className="w-full h-full object-cover"
         />

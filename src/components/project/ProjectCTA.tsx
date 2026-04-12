@@ -22,7 +22,7 @@ const ProjectCTA = () => {
 
       <div className="w-full md:w-1/2 aspect-video bg-[#0B1E33] rounded-[48px] flex items-center justify-center relative overflow-hidden">
         {/* The Drafting Compass Icon */}
-        <img src="/image copy.png" alt="" />
+        <img src="/image copy.webp" alt="" />
       </div>
     </section>
   );

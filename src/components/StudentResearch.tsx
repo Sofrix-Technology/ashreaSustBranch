@@ -52,7 +52,7 @@ const StudentResearch = () => {
             <div className="relative w-full h-[320px] md:h-[400px] mb-6 overflow-hidden rounded-[2.5rem]">
               <div 
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{ backgroundImage: "url('/rendering-ventilation-system.jpg')" }}
+                style={{ backgroundImage: "url('/rendering-ventilation-system.webp')" }}
               />
               <div className="absolute inset-0 bg-[#0f1b29]/20" />
               <div className="absolute top-6 left-6 flex flex-wrap gap-2">

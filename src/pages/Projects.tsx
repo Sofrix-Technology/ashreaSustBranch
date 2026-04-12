@@ -10,7 +10,7 @@ const showcaseData: ShowcaseItem[] = [
     description: "A comparative analysis of solar powered cooling versus traditional electrical vapor compression in arid climates.",
     tags: ["MATLAB", "EnergyPlus"],
     linkText: "View technical report",
-    imageUrl: "/dashboard.jpg"
+    imageUrl: "/dashboard.webp"
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const showcaseData: ShowcaseItem[] = [
     description: "Development of passive cooling prototypes using locally sourced porous materials and evaporative principles.",
     tags: ["Prototype", "Thermal Imaging"],
     linkText: "Examine prototype",
-    imageUrl: "/greenbuilding.jpg"
+    imageUrl: "/greenbuilding.webp"
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const showcaseData: ShowcaseItem[] = [
     description: "Feasibility study for a campus-wide district cooling network at SUST to reduce peak demand by 30%.",
     tags: ["Hydronic Calc", "LCA"],
     linkText: "Read feasibility study",
-    imageUrl: "/scitch.jpg"
+    imageUrl: "/scitch.webp"
   }
 ];
 

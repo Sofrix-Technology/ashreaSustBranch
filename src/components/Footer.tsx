@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
       <div className="max-w-360 w-full mx-auto flex flex-col md:flex-row justify-between gap-12 md:gap-8">
         {/* Brand Section */}
         <div className="flex flex-col md:max-w-xs lg:max-w-sm space-y-4">
-          <img src="/Ashrae-Logo-H.png" alt="Ashrae SUST Branch Logo" />
+          <img loading="lazy" src="/Ashrae-Logo-H.webp" alt="Ashrae SUST Branch Logo" />
           <p className="text-[#8492a6] text-[14px] leading-relaxed pr-4">
             Leading the way in sustainable built
             environments at Sudan University of
