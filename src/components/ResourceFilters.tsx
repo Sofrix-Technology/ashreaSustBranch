@@ -1,10 +1,12 @@
+import { Search } from 'lucide-react';
+
 const ResourceFilters = () => {
   const categories = [
-    { name: 'All Resources', active: true },
-    { name: 'Articles', active: false },
-    { name: 'PDFs & Standards', active: false },
+    { name: 'All Resources',      active: true  },
+    { name: 'Articles',           active: false },
+    { name: 'PDFs & Standards',   active: false },
     { name: 'Learning Materials', active: false },
-    { name: 'HVAC Tools', active: false },
+    { name: 'HVAC Tools',         active: false },
   ];
 
   return (
@@ -23,12 +25,11 @@ const ResourceFilters = () => {
           </button>
         ))}
       </div>
+
       <div className="w-full lg:w-auto">
         <div className="relative w-full lg:w-[320px]">
-          <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
-            <svg className="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
+          <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none text-gray-400">
+            <Search size={16} />
           </div>
           <input
             type="text"

@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { name: 'Home', path: '/', isActive: false },
-  { name: 'Activities', path: '/activities', isActive: true },
-  { name: 'Projects', path: '/projects', isActive: false },
-  { name: 'Resources', path: '/resources', isActive: false },
-  { name: 'Team', path: '/team', isActive: false },
+  { name: 'Home',       path: '/' },
+  { name: 'Activities', path: '/activities' },
+  { name: 'Projects',   path: '/projects' },
+  { name: 'Resources',  path: '/resources' },
+  { name: 'Team',       path: '/team' },
 ];
 
 const Navbar: React.FC = () => {
@@ -27,14 +28,9 @@ const Navbar: React.FC = () => {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-[#00508f] hover:text-[#003d6e] focus:outline-none p-2 bg-gray-50 rounded-md"
+              aria-label="Toggle menu"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
-                {mobileMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                )}
-              </svg>
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
@@ -44,7 +40,6 @@ const Navbar: React.FC = () => {
           {navLinks.map((link, idx) => (
             <NavLink
               key={idx}
-
               to={link.path}
               className={({ isActive }) => `text-[15px] font-[500] transition-colors py-1.5 border-b-2
                 ${isActive
