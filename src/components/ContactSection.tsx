@@ -10,10 +10,7 @@ const ContactSection: React.FC = () => {
     { label: 'LinkedIn', href: 'https://www.linkedin.com/company/ashrae-sust-branch/', icon: <Users size={18} /> },
     { label: 'Facebook', href: 'https://www.facebook.com/p/Ashrae-Sust-Branch-61569962309429/', icon: <Share2 size={18} /> },
   ];
-
-  const inputBase =
-    'w-full bg-white border border-[#dde3ea] rounded-xl px-4 py-3 text-sm text-[#122338] placeholder-[#b8c5d0] outline-none focus:border-[#122338] focus:ring-2 focus:ring-[#122338]/10 transition';
-
+  
   return (
     <section id="contact" className="bg-white py-20 font-sans">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
