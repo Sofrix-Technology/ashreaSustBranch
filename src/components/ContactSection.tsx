@@ -10,7 +10,7 @@ const ContactSection: React.FC = () => {
     { label: 'LinkedIn', href: 'https://www.linkedin.com/company/ashrae-sust-branch/', icon: <Users size={18} /> },
     { label: 'Facebook', href: 'https://www.facebook.com/p/Ashrae-Sust-Branch-61569962309429/', icon: <Share2 size={18} /> },
   ];
-  
+
   return (
     <section id="contact" className="bg-white py-20 font-sans">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -32,7 +32,7 @@ const ContactSection: React.FC = () => {
             {/* Email card */}
             <a
               href="mailto:sustbranchashrae@gmail.com"
-              className="flex items-center gap-4 bg-[#f8f9fb] border border-[#e9ecf0] rounded-2xl px-6 py-5 mb-4 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 no-underline"
+              className="flex items-center gap-4 bg-[#f8f9fb] border border-[#e9ecf0] rounded-2xl px-6 py-5 mb-4 hover:-translate-y-0.5 transition-all duration-200 no-underline"
             >
               <div className="w-11 h-11 rounded-xl bg-[#1a2e44] text-white flex items-center justify-center shrink-0">
                 <Mail size={18} />
@@ -48,7 +48,7 @@ const ContactSection: React.FC = () => {
               href="https://www.google.com/maps?q=15.560283,32.539111"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 bg-[#f8f9fb] border border-[#e9ecf0] rounded-2xl px-6 py-5 mb-4 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+              className="flex items-center gap-4 bg-[#f8f9fb] border border-[#e9ecf0] rounded-2xl px-6 py-5 mb-4 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
             >
               <div className="w-11 h-11 rounded-xl bg-[#1a6b45] text-white flex items-center justify-center shrink-0">
                 <MapPin size={18} />
