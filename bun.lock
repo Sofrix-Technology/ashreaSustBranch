@@ -5,6 +5,7 @@
     "": {
       "name": "ashreasustbranch",
       "dependencies": {
+        "@hashintel/refractive": "^0.0.3",
         "@tailwindcss/vite": "^4.2.2",
         "framer-motion": "^12.38.0",
         "lucide-react": "^1.8.0",
@@ -86,6 +87,8 @@
     "@eslint/object-schema": ["@eslint/object-schema@2.1.7", "", {}, "sha512-VtAOaymWVfZcmZbp6E2mympDIHvyjXs/12LqWYjVw6qjrfF+VK+fyG33kChz3nnK+SU5/NeHOqrTEHS8sXO3OA=="],
 
     "@eslint/plugin-kit": ["@eslint/plugin-kit@0.4.1", "", { "dependencies": { "@eslint/core": "^0.17.0", "levn": "^0.4.1" } }, "sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA=="],
+
+    "@hashintel/refractive": ["@hashintel/refractive@0.0.3", "", { "peerDependencies": { "react": "^19.0.0", "react-dom": "^19.0.0" } }, "sha512-f/7QK+6IiHyivl1RDHXme5VGhxindl7yOxU8MwU+gKqiYVgMjK0kiNPI/Rnc/EpHSPM6NZ9gkwwqdQ/lUz0dhQ=="],
 
     "@humanfs/core": ["@humanfs/core@0.19.1", "", {}, "sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA=="],
 

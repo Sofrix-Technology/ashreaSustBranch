@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { Send, Leaf } from 'lucide-react';
+import { refractive } from "@hashintel/refractive";
 
 const ContactForm: React.FC = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -8,10 +9,10 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     const form = e.currentTarget;
     const formData = new FormData(form);
-    
+
     const fullName = formData.get('fullName');
     const email = formData.get('email');
     const message = formData.get('message');
@@ -36,7 +37,7 @@ const ContactForm: React.FC = () => {
           id: loadingToast,
           duration: 5000,
         });
-        
+
         formRef.current?.reset();
       } else {
         throw new Error("Failed to send");
@@ -59,10 +60,10 @@ const ContactForm: React.FC = () => {
       <div className="bg-[#f8f9fb] border border-[#e9ecf0] rounded-2xl p-8 shadow-sm">
         <h3 className="text-xl font-bold text-[#122338] mb-7">Send a Message</h3>
 
-        <form 
-          ref={formRef} 
-          name="contact-message" 
-          onSubmit={handleSubmit} 
+        <form
+          ref={formRef}
+          name="contact-message"
+          onSubmit={handleSubmit}
           data-netlify="true"
         >
           <input type="hidden" name="form-name" value="contact-message" />
@@ -87,7 +88,6 @@ const ContactForm: React.FC = () => {
             <label className="text-[10px] font-semibold tracking-widest uppercase text-[#8a9bb0]">Message</label>
             <textarea name="message" rows={5} placeholder="Your technical inquiry..." required className={`${inputBase} resize-none`} />
           </div>
-
           <button
             type="submit"
             disabled={loading}
@@ -100,6 +100,10 @@ const ContactForm: React.FC = () => {
               </>
             )}
           </button>
+          <refractive.div
+            className="your-class-name"
+            refraction={{ radius: 12, blur: 5, bezelWidth: 8 }}
+          >hekkoss</refractive.div>
         </form>
       </div>
 
