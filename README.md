@@ -1,4 +1,4 @@
-# ASHRAE Sudan Student Branch — Official Website
+# ASHRAE SUST Student Branch — Official Website
 
 > The official web presence of the **ASHRAE Student Branch** at Sudan University of Science and Technology (SUST). Built to empower Sudan's next generation of HVAC&R engineers through knowledge, community, and sustainable innovation.
 
