@@ -1,18 +1,32 @@
 import React, { useRef } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
+type Data ={
+  name: string;
+  message: string;
+  email: string
+}
+
 const JoinSection: React.FC = () => {
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+
+     const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data: Data = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      message: formData.get("message") as string,
+    }
     const loadingToast = toast.loading('Sending your application...');
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData as any).toString(),
+      body: new URLSearchParams(data).toString(),
     })
       .then(() => {
         toast.success("Form successfully submitted!", {
