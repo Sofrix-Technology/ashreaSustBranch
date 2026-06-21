@@ -50,11 +50,11 @@ const TooltipCursor: React.FC<TooltipCursorProps> = ({ children, delay }) => {
     let tooltipX = currentPos.current.x;
     let tooltipY = currentPos.current.y;
 
-    if (tooltipX + tooltipWidth > window.innerWidth) {
-      tooltipX = window.innerWidth - tooltipWidth - 10;
+    if (tooltipX + tooltipWidth > globalThis.innerWidth) {
+      tooltipX = globalThis.innerWidth - tooltipWidth - 10;
     }
-    if (tooltipY + tooltipHeight > window.innerHeight) {
-      tooltipY = window.innerHeight - tooltipHeight - 10;
+    if (tooltipY + tooltipHeight > globalThis.innerHeight) {
+      tooltipY = globalThis.innerHeight - tooltipHeight - 10;
     }
 
     setTooltipPosition({ x: tooltipX, y: tooltipY });
