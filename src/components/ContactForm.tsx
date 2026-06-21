@@ -2,16 +2,30 @@ import React, { useState, useRef } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { Send, Leaf } from 'lucide-react';
 
+type Data = {
+  fullName: string;
+  email: string;
+  subject?: string;
+  message: string;
+}
+
 const ContactForm: React.FC = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     const form = e.currentTarget;
     const formData = new FormData(form);
-    
+
+    const data: Data = {
+      fullName: formData.get("fullName") as string,
+      email: formData.get("email") as string,
+      subject: (formData.get("subject") as string) ?? "",
+      message: formData.get("message") as string,
+    };
+
     const fullName = formData.get('fullName');
     const email = formData.get('email');
     const message = formData.get('message');
@@ -28,7 +42,7 @@ const ContactForm: React.FC = () => {
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString(),
+        body: new URLSearchParams(data).toString(),
       });
 
       if (response.ok) {
@@ -36,12 +50,12 @@ const ContactForm: React.FC = () => {
           id: loadingToast,
           duration: 5000,
         });
-        
+
         formRef.current?.reset();
       } else {
         throw new Error("Failed to send");
       }
-    } catch (error) {
+    } catch (_error) {
       toast.error("Submission failed. Please try again.", {
         id: loadingToast,
       });
@@ -59,10 +73,10 @@ const ContactForm: React.FC = () => {
       <div className="bg-[#f8f9fb] border border-[#e9ecf0] rounded-2xl p-8 shadow-sm">
         <h3 className="text-xl font-bold text-[#122338] mb-7">Send a Message</h3>
 
-        <form 
-          ref={formRef} 
-          name="contact-message" 
-          onSubmit={handleSubmit} 
+        <form
+          ref={formRef}
+          name="contact-message"
+          onSubmit={handleSubmit}
           data-netlify="true"
         >
           <input type="hidden" name="form-name" value="contact-message" />
