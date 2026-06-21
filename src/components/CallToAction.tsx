@@ -15,7 +15,8 @@ const CallToAction: React.FC = () => {
           </p>
           
           <a 
-            href="#" 
+            href="https://forms.gle/DQWEFVKwPaXWTV9BA"
+            target='_blank'
             className="inline-flex justify-center items-center bg-[#009245] hover:bg-[#007a38] text-white text-[16px] font-[600] py-4 px-10 rounded-full transition-colors shadow-sm"
           >
             Apply for Membership
